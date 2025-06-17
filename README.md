@@ -335,4 +335,4 @@ This project is inspired by the profound questions about the nature of mind, con
 
 ---
 
-<sub>📜 **License**: MIT | 🤝 **Code of Conduct**: [Contributor Covenant](./CODE_OF_CONDUCT.md) | 📋 **Contributing**: [Contributing Guide](./CONTRIBUTING.md)</sub>
+<sub>📜 **License**: MIT | 🤝 **Code of Conduct**: [Contributor Covenant](./CODE_OF_CONDUCT.md) | 📋 **Contributing**: [Contributing Guide](./CONTRIBUTING.md) | 🌍 [Русская версия](./README.ru.md)</sub>
