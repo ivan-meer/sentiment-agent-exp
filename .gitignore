@@ -1,0 +1,365 @@
+# .gitignore for Sentiment Agent Experiment
+# ==========================================
+#
+# This file tells Git which files and directories to ignore when tracking changes.
+# Think of it as a filter that keeps your repository clean and professional by
+# excluding files that shouldn't be shared publicly or that are generated automatically.
+#
+# For a consciousness research project, this is especially important because:
+# 1. We may have sensitive experimental data that shouldn't be public
+# 2. Each researcher has different development environments
+# 3. We generate lots of temporary files during experiments
+# 4. We want to protect participant privacy in human-AI interaction studies
+
+# ============================================================================
+# PYTHON-SPECIFIC IGNORES
+# ============================================================================
+
+# Byte-compiled / optimized / DLL files
+# These are created automatically when Python runs and contain no source information
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions (if we use any compiled components for performance)
+*.so
+
+# Distribution / packaging files
+# These are created when building the package for distribution
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+# Each researcher may use different virtual environment names
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+consciousness_env/
+sentiment_agent_env/
+research_env/
+
+# ============================================================================
+# RESEARCH DATA AND EXPERIMENTAL FILES
+# ============================================================================
+
+# Agent memory files (contain personal conversation history)
+# These files store the agent's learned experiences and should not be shared
+# unless explicitly part of a research dataset
+*_memory.json
+agent_memories/
+experimental_data/
+conversation_logs/
+participant_data/
+
+# Experimental results and analysis
+# Raw experimental data should be kept private until properly anonymized
+results/
+analysis_output/
+experiment_logs/
+behavioral_data/
+consciousness_tests/
+*.experiment
+*.analysis
+
+# Model files and trained components
+# These can be large and are often regenerated, so we don't track them in Git
+models/
+checkpoints/
+*.pkl
+*.model
+*.weights
+*.safetensors
+
+# Research notebooks with potentially sensitive content
+# Jupyter notebooks often contain experimental data and should be cleaned before sharing
+private_notebooks/
+experimental_notebooks/
+research_drafts/
+
+# ============================================================================
+# DEVELOPMENT ENVIRONMENT FILES
+# ============================================================================
+
+# PyCharm IDE files
+# These contain personal IDE settings that differ between researchers
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Visual Studio Code settings
+# Personal workspace settings that shouldn't be shared
+.vscode/
+*.code-workspace
+
+# Sublime Text settings
+*.sublime-project
+*.sublime-workspace
+
+# Vim editor files
+*.swp
+*.swo
+*~
+
+# Emacs editor files
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ============================================================================
+# OPERATING SYSTEM FILES
+# ============================================================================
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# macOS thumbnails
+._*
+
+# Windows system files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux system files
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================================
+# RESEARCH DOCUMENTATION AND DRAFTS
+# ============================================================================
+
+# LaTeX compilation files (for research papers)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
+
+# Research paper drafts and submissions
+drafts/
+submissions/
+reviewer_comments/
+paper_versions/
+
+# Personal research notes
+personal_notes/
+research_diary/
+todo_lists/
+*.personal
+
+# ============================================================================
+# CONFIGURATION AND ENVIRONMENT FILES
+# ============================================================================
+
+# Environment variables and secrets
+# These often contain API keys, database passwords, or other sensitive information
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+secrets.json
+config_local.py
+local_settings.py
+
+# Database files
+# Local databases used for development shouldn't be shared
+*.db
+*.sqlite
+*.sqlite3
+local_database/
+
+# Configuration files with personal settings
+config_personal.yaml
+settings_local.json
+user_preferences.json
+
+# ============================================================================
+# TESTING AND QUALITY ASSURANCE
+# ============================================================================
+
+# Test coverage reports
+# These are generated automatically and don't need to be tracked
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Test result files
+test_results/
+test_reports/
+*.testresult
+
+# ============================================================================
+# LOGGING AND MONITORING
+# ============================================================================
+
+# Log files from development and testing
+# These contain debugging information but shouldn't clutter the repository
+*.log
+logs/
+debug_logs/
+error_logs/
+agent_logs/
+
+# Monitoring and profiling files
+*.prof
+*.profile
+profiling_results/
+
+# ============================================================================
+# MACHINE LEARNING AND AI SPECIFIC
+# ============================================================================
+
+# TensorBoard logs
+# These visualization files can be regenerated and are often large
+runs/
+tensorboard_logs/
+tb_logs/
+
+# Weights & Biases (wandb) logs
+# Popular ML experiment tracking tool
+wandb/
+
+# MLflow tracking
+# Another ML experiment tracking system
+mlruns/
+
+# Hugging Face cache
+# Downloaded models and tokenizers cache
+.cache/
+transformers_cache/
+
+# ============================================================================
+# DOCUMENTATION AND WEBSITE
+# ============================================================================
+
+# Sphinx documentation builds
+# Generated documentation that can be rebuilt from source
+docs/_build/
+docs/build/
+.sphinx-build/
+
+# MkDocs site builds
+site/
+
+# Jekyll builds (if using GitHub Pages)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# ============================================================================
+# BACKUP AND TEMPORARY FILES
+# ============================================================================
+
+# Automatic backups
+*.backup
+*.bak
+*.tmp
+backups/
+
+# Temporary files
+temp/
+tmp/
+temporary/
+
+# Archive files (unless specifically needed for research)
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# ============================================================================
+# RESEARCH-SPECIFIC PRIVACY PROTECTION
+# ============================================================================
+
+# Human participant data
+# Any files containing data from human subjects must be carefully managed
+participant_responses/
+human_feedback/
+user_studies/
+interview_transcripts/
+survey_data/
+
+# Personally identifiable information
+# Any files that might contain PII should be excluded by default
+pii_data/
+personal_info/
+identifiable_data/
+
+# Research collaboration files
+# Files shared between institutions that might have access restrictions
+collaboration_data/
+shared_datasets/
+external_data/
+
+# ============================================================================
+# FINAL NOTES FOR RESEARCHERS
+# ============================================================================
+
+# Remember: The goal of .gitignore is to keep your repository clean and professional
+# while protecting sensitive information. When in doubt, it's better to exclude
+# a file and add it explicitly later than to accidentally share sensitive data.
+#
+# For consciousness research, be especially careful about:
+# 1. Agent memory files that might contain personal conversations
+# 2. Experimental data before it's properly anonymized  
+# 3. Configuration files with API keys or database credentials
+# 4. Personal research notes that aren't ready for public sharing
+#
+# If you need to share specific ignored files for research purposes,
+# you can add them back with: git add -f filename
+#
+# For collaborative research, discuss with your team what should and shouldn't
+# be shared to ensure everyone's privacy and the integrity of your research.
